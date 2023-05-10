@@ -2,3 +2,23 @@
   - name: gather_facts
     gather_facts:
 
+# Steps Required
+#=================
+# Tailscale repos: https://pkgs.tailscale.com/stable/
+## RHEL 9: https://pkgs.tailscale.com/stable/rhel/9/tailscale.repo
+## RHEL 9 GPG: https://pkgs.tailscale.com/stable/rhel/9/repo.gpg
+
+
+# Install Tailscale
+## sudo dnf install tailscale
+
+
+# Enable and start tailscaled
+## sudo systemctl enable --now tailscaled
+## sudo tailscale up --accept-dns --accept-routes
+## --advertise-exit-node
+## --advertise-routes string "10.0.0.0/8,192.168.0.0/16"
+
+
+# Start Tailscale!
+# sudo tailscale up
